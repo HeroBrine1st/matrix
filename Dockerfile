@@ -2,7 +2,7 @@ FROM python:3.9-slim as builder
 
 COPY pip.conf /etc/pip.conf
 
-RUN pip install --prefix="/install" --no-warn-script-location matrix-synapse[all]==1.48.0
+RUN pip install --prefix="/install" --no-warn-script-location matrix-synapse[all]==1.52.0
 
 FROM python:3.9-slim
 
