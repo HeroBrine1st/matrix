@@ -1,6 +1,6 @@
 FROM python:3.9-slim as builder
 
-ARG version=1.52.0
+ARG version=1.54.0
 
 COPY pip.conf /etc/pip.conf
 
