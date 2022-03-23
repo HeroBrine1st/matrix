@@ -1,8 +1,10 @@
 FROM python:3.9-slim as builder
 
+ARG version=1.52.0
+
 COPY pip.conf /etc/pip.conf
 
-RUN pip install --prefix="/install" --no-warn-script-location matrix-synapse[all]==1.52.0
+RUN pip install --prefix="/install" --no-warn-script-location matrix-synapse[all]==$version
 
 FROM python:3.9-slim
 
